@@ -57,7 +57,7 @@ Rules:
   )
   outputs=model.generate(
       **inputs,
-      max_new_tokens=100
+      max_new_tokens=80
   )
   length=inputs["input_ids"].shape[-1]
   response=tokenizer.decode(outputs[0][length:],skip_special_tokens=True)
