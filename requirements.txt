@@ -1,0 +1,8 @@
+transformers
+sentence_transformers
+torch
+torchvision
+accelerate
+faiss-cpu
+numpy
+streamlit
