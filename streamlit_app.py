@@ -24,18 +24,18 @@ if "messages" not in st.session_state:
 for message in st.session_state.messages:
     st.chat_message(message["role"]).write(message["content"])
 user_input=st.chat_input("Ask a Question...")
-q=user_input.lower().strip()
-if q.strartswith(("who is","who was","what is","what was","define","who","what")):
-    instruction="- Answer in one sentence."
-else:
-    instruction="- Answer briefly using only the provided context."
-user_input=user_input.strip()+instruction
 if user_input:
+    q=user_input.lower().strip()
+    if q.startswith(("who is","who was","what is","what was","define","who","what")):
+        instruction="- Answer in one sentence."
+    else:
+        instruction="- Answer briefly using only the provided context."
+    question_for_model=user_input.strip()+instruction
     st.session_state.messages.append({
         "role":"user",
         "content":user_input
     })
-    answer=infer(user_input)
+    answer=infer(question_for_model)
     st.session_state.messages.append({
         "role":"assistant",
         "content":answer
