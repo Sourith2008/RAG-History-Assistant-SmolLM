@@ -2,7 +2,7 @@ import streamlit as st
 from app.inference import infer
 st.title("📚 Class IX History RAG Assistant")
 st.markdown("**Ask questions from *India and the Contemporary World-I* and get precise, concise, context-grounded answers powered by SmolLM2-135M-Instruct.**")
-st.markdown(**💡 Try the sample questions in the sidebar to get started.**)
+st.markdown("**💡 Try the sample questions in the sidebar to get started.**")
 with st.expander("ℹ️ About this project"):
     st.write("""
 Class IX History RAG Assistant is a Retrieval-Augmented Generation (RAG) chatbot built around the NCERT Class IX History textbook, India and the Contemporary World-I.
