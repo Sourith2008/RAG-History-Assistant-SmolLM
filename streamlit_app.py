@@ -26,7 +26,7 @@ for message in st.session_state.messages:
 user_input=st.chat_input("Ask a Question...")
 if user_input:
     q=user_input.lower().strip()
-    if q.startswith(("who is","who was","what is","what was","define","who","what")):
+    if q.startswith(("who is","who was","what is","what was","define")):
         instruction="- Answer in one sentence."
     else:
         instruction="- Answer briefly using only the provided context."
