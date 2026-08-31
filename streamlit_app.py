@@ -25,7 +25,7 @@ for message in st.session_state.messages:
     st.chat_message(message["role"]).write(message["content"])
 user_input=st.chat_input("Ask a Question...")
 if user_input:
-    user_input.lower()
+    user_input=user_input.lower()
     q=user_input.strip()
     if q.startswith(("who is","who was","what is","what was","define")):
         instruction="- Answer in one sentence."
