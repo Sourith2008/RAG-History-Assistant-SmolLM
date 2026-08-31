@@ -64,7 +64,7 @@ SmolLM2-135M-Instruct generates the answer
     st.sidebar.markdown("""
     - What is reign of terror?
     - Who was Napoleon?
-    - Tell me about Karl Marx.
+    - Tell me about Karl Marx
     - What was allied powers?
     - Who was Subhash Chandra Bose?
     - Define communism.
