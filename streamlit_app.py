@@ -25,13 +25,12 @@ for message in st.session_state.messages:
     st.chat_message(message["role"]).write(message["content"])
 user_input=st.chat_input("Ask a Question...")
 if user_input:
-    user_input=user_input.lower()
-    q=user_input.strip()
+    q=user_input.lower().strip()
     if q.startswith(("who is","who was","what is","what was","define")):
         instruction="- Answer in one sentence."
     else:
         instruction="- Answer briefly using only the provided context."
-    question_for_model=user_input.strip()+instruction
+    question_for_model=q+instruction
     st.session_state.messages.append({
         "role":"user",
         "content":user_input
