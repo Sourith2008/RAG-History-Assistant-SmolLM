@@ -62,10 +62,11 @@ SmolLM2-135M-Instruct generates the answer
     st.sidebar.markdown("### 📚 Example Questions")
 
     st.sidebar.markdown("""
-    - What were the main two causes of French revolution - answer precisely.
+    - What is reign of terror?
     - Who was Napoleon?
-    - What were the consequences of the Russian Revolution?
-    - What was India's role in the Second World War?
+    - Tell me about Karl Marx.
+    - What was allied powers?
+    - Who was Subhash Chandra Bose?
     - Define communism.
     """)
     if st.button("Clear Chat"):
